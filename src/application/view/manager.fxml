@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ManagerController">
+   <children>
+      <TreeView fx:id="dirTree" layoutX="14.0" layoutY="14.0" prefHeight="445.0" prefWidth="165.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="12.0" />
+      <Button fx:id="usageButton" layoutX="12.0" layoutY="438.0" mnemonicParsing="false" onAction="#usageAction" prefHeight="30.0" prefWidth="165.0" text="查看磁盘使用情况" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0" />
+      <Button fx:id="crippleButton" layoutX="253.0" layoutY="438.0" mnemonicParsing="false" onAction="#crippleAction" prefHeight="30.0" prefWidth="139.0" text="随机损坏磁盘块" />
+      <Button fx:id="fixButton" layoutX="412.0" layoutY="438.0" mnemonicParsing="false" onAction="#fixAction" prefHeight="30.0" prefWidth="88.0" text="修复磁盘" />
+      <Button fx:id="formatButton" layoutX="444.0" layoutY="438.0" mnemonicParsing="false" onAction="#formatAction" prefHeight="30.0" prefWidth="108.0" text="格式化磁盘" AnchorPane.rightAnchor="12.0" />
+      <TextField fx:id="pathText" editable="false" layoutX="189.0" layoutY="12.0" prefHeight="30.0" prefWidth="439.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0" />
+      <ListView fx:id="fileList" layoutX="189.0" layoutY="50.0" prefHeight="383.0" prefWidth="438.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="50.0">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu></ListView>
+      <AnchorPane fx:id="limitPane" opacity="0.8" prefHeight="50.0" prefWidth="251.0" style="-fx-background-color: #87CEFA; -fx-border-color: #EEEEEE;" visible="false">
+         <children>
+            <Text layoutX="10.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="不能同时打开超过5个文件" AnchorPane.topAnchor="12.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="baseAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SystemController">
+   <children>
+      <ImageView fx:id="backgroundView" fitHeight="800.0" fitWidth="1280.0" layoutX="14.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <HBox fx:id="taskBar" alignment="CENTER" layoutX="540.0" layoutY="745.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, #DFEFFF,#D0E0F0,#DFEFFF); -fx-border-style: solid none none none; -fx-border-color: #DDDDDD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <GridPane alignment="CENTER" hgap="6.0" prefHeight="70.0" prefWidth="240.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="startMenuButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseClicked="#startMenuAction" prefHeight="60.0" prefWidth="60.0" text="W">
+                     <tooltip>
+                        <Tooltip text="开始" />
+                     </tooltip></Button>
+                  <Button fx:id="managerButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#managerAction" prefHeight="60.0" prefWidth="60.0" text="M" GridPane.columnIndex="1">
+                     <tooltip>
+                        <Tooltip text="文件管理器" />
+                     </tooltip></Button>
+                  <Button fx:id="commandButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#commandAction" prefHeight="60.0" prefWidth="60.0" text="C" GridPane.columnIndex="2">
+                     <tooltip>
+                        <Tooltip text="命令行" />
+                     </tooltip></Button>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="1180.0" layoutY="600.0" prefHeight="60.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text fx:id="timeText" strokeType="OUTSIDE" strokeWidth="0.0" text="HH:MM">
+               <font>
+                  <Font name="Microsoft YaHei" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="dateText" strokeType="OUTSIDE" strokeWidth="0.0" text="YYYY/MM/DD">
+               <font>
+                  <Font name="Microsoft YaHei" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <GridPane alignment="CENTER" layoutX="164.0" layoutY="70.0" prefHeight="540.0" prefWidth="120.0" vgap="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane fx:id="managerApp" prefHeight="120.0" prefWidth="120.0">
+               <bottom>
+                  <Label text="文件管理器" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="10.5" offsetX="1.0" offsetY="1.0" radius="2.125" spread="0.3" width="0.0" />
+                     </effect>
+                  </Label>
+               </bottom>
+               <center>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../resource/manager.png" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="helpApp" prefHeight="120.0" prefWidth="120.0" GridPane.rowIndex="2">
+               <bottom>
+                  <Label text="帮助文档" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="10.5" offsetX="1.0" offsetY="1.0" radius="2.125" spread="0.3" width="0.0" />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </bottom>
+               <center>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../resource/help.png" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="commandApp" prefHeight="120.0" prefWidth="120.0" GridPane.rowIndex="1">
+               <bottom>
+                  <Label text="命令行" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="10.5" offsetX="1.0" offsetY="1.0" radius="2.125" spread="0.3" width="0.0" />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </bottom>
+               <center>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../resource/command.png" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="aboutApp" prefHeight="120.0" prefWidth="120.0" GridPane.rowIndex="3">
+               <bottom>
+                  <Label text="关于我们" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="10.5" offsetX="1.0" offsetY="1.0" radius="2.125" spread="0.3" width="0.0" />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </bottom>
+               <center>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../resource/about.png" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

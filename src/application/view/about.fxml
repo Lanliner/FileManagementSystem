@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="380.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="50.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="模拟磁盘文件管理系统" textAlignment="CENTER" wrappingWidth="499.70703125" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="50.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="软工一班" textAlignment="CENTER" wrappingWidth="499.70703125" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="50.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="201925220123  徐梓皓              框架设计，主要代码编写" wrappingWidth="520.30029296875" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="170.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="50.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="201925220124  余嘉祺                 报告编写，算法设计" wrappingWidth="520.30029296875" AnchorPane.topAnchor="220.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="50.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="201925220125  余宇桐             内核代码编写，模块链接" wrappingWidth="520.30029296875" AnchorPane.topAnchor="270.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="50.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="201925220126   张鹏              界面设计，代码、报告编写" wrappingWidth="526.30029296875" AnchorPane.topAnchor="320.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

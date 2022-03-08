@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CommandController">
+   <children>
+      <TextField fx:id="inputText" focusTraversable="false" layoutX="14.0" layoutY="14.0" onAction="#inputAction" prefHeight="30.0" prefWidth="612.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Courier New" size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="15.0" layoutY="11.0" text="输入">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="88.0" text="输出">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="outputText" editable="false" focusTraversable="false" layoutX="10.0" layoutY="119.0" prefHeight="355.0" prefWidth="620.0" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="Courier New" size="16.0" />
+         </font></TextArea>
+   </children>
+</AnchorPane>
